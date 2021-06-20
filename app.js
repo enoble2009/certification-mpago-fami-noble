@@ -44,7 +44,7 @@ app.get('/failure', function (req, res) {
     res.render('home');
 });
 
-app.get('/notification', function (req, res) {
+app.post('/notification', function (req, res) {
     console.dir(req.body);
     res.render('home');
 });
