@@ -66,7 +66,7 @@ app.post('/buy-product', function (req, res) {
     console.dir(item);
 
     var preference = {
-        external_reference = 'enoble2009@gmail.com',
+        external_reference: 'enoble2009@gmail.com',
         integrator_id: "dev_24c65fb163bf11ea96500242ac130004",
         items: [
             item
