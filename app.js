@@ -50,21 +50,23 @@ app.get('/failure', function (req, res) {
 });
 
 app.post('/notification', function (req, res) {
+    console.dir('-- NOTIFICATION --');
     console.dir(req.body);
+    console.dir('-- NOTIFICATION --');
     res.render('home');
 });
 
 app.post('/buy-product', function (req, res) {
     var item = req.body;
-    item.id = '123';
+    item.id = '1234';
     item.description = 'Dispositivo móvil de Tienda e-commerce';
     item.quantity = parseFloat(item.quantity);
     item.unit_price = parseFloat(item.unit_price);
-    item.external_reference = 'enoble2009@gmail.com';
     item.picture_url = 'https://' + req.headers.host + item.picture_url.substring(1);
     console.dir(item);
 
     var preference = {
+        external_reference = 'enoble2009@gmail.com';
         integrator_id: "dev_24c65fb163bf11ea96500242ac130004",
         items: [
             item
