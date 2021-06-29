@@ -61,6 +61,7 @@ app.post('/buy-product', function (req, res) {
     item.quantity = parseFloat(item.quantity);
     item.unit_price = parseFloat(item.unit_price);
     item.external_reference = 'enoble2009@gmail.com';
+    item.picture_url = req.headers.host + item.picture_url.substring(1);
     console.dir(item);
 
     var preference = {
