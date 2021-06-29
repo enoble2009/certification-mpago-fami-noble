@@ -58,7 +58,6 @@ app.post('/buy-product', function (req, res) {
     var item = req.body;
     item.id = '123';
     item.description = 'Dispositivo móvil de Tienda e-commerce';
-    item.currency_id = 'UYU';
     item.quantity = parseFloat(item.quantity);
     item.unit_price = parseFloat(item.unit_price);
     item.external_reference = 'enoble2009@gmail.com';
